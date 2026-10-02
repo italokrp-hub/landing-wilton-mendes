@@ -202,114 +202,106 @@ function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden"
-      style={{
-        background: 'linear-gradient(135deg, #050d1a 0%, #0a1628 45%, #102040 70%, #1d3461 100%)',
-      }}
+      className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden"
     >
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-5" style={{
-        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-      }} />
+      {/* Background Image & Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80"
+          alt="Imóvel de luxo"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-950/40 lg:bg-gradient-to-r lg:from-slate-950 lg:via-slate-950/90 lg:to-slate-950/30" />
+      </div>
 
-      {/* Radial glow */}
-      <div className="absolute top-1/3 right-1/4 w-96 h-96 rounded-full opacity-10" style={{ background: 'radial-gradient(circle, #3b82f6, transparent 70%)' }} />
-      <div className="absolute bottom-1/4 left-1/3 w-64 h-64 rounded-full opacity-10" style={{ background: 'radial-gradient(circle, #f5c842, transparent 70%)' }} />
-
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-32 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
-        {/* Text column */}
-        <div>
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-24 lg:py-32 flex flex-col lg:flex-row items-center justify-between gap-12 w-full mt-16 lg:mt-0">
+        
+        {/* Text content */}
+        <div className="flex-1 text-center lg:text-left flex flex-col items-center lg:items-start max-w-3xl">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-amber-400/10 border border-amber-400/30 text-amber-300 text-xs font-semibold px-4 py-2 rounded-full mb-8 animate-fade-in-up">
-            <svg className="w-3.5 h-3.5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-            5.0 no Google · 23 avaliações reais
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-slate-200 text-xs sm:text-sm font-medium mb-6 animate-fade-in-up">
+            <span className="text-amber-400 text-sm">⭐</span> 5.0 no Google (23 avaliações) <span className="opacity-50">•</span> CRECI 7473
           </div>
 
-          {/* Heading */}
-          <h1
-            className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-6 animate-fade-in-up delay-100"
-            style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
-          >
-            Segurança, transparência e as{' '}
-            <span className="gradient-text">melhores oportunidades</span>{' '}
-            imobiliárias em Manaus
+          {/* Headline */}
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-6 tracking-tight animate-fade-in-up delay-100 uppercase">
+            Encontre o imóvel ideal em Manaus com segurança e exclusividade
           </h1>
 
-          <p className="text-lg text-slate-300 leading-relaxed mb-8 animate-fade-in-up delay-200">
-            Não compre ou venda um imóvel sem orientação especializada. Ofereço consultoria personalizada para você encontrar o imóvel certo, financiar com segurança e regularizar sem burocracia — do início ao fim.
+          {/* Subtitle */}
+          <p className="text-lg sm:text-xl text-slate-200 leading-relaxed mb-10 max-w-2xl animate-fade-in-up delay-200">
+            Assessoria imobiliária completa para compra, venda e financiamento de imóveis de alto padrão e oportunidades únicas com Wilton Mendes.
           </p>
 
-          {/* Social proof strip */}
-          <div className="flex flex-wrap items-center gap-6 mb-10 animate-fade-in-up delay-300">
-            <div className="flex items-center gap-2">
-              <Stars />
-              <span className="text-white font-bold">5.0</span>
-              <span className="text-slate-400 text-sm">(23 avaliações)</span>
-            </div>
-            <div className="h-4 w-px bg-slate-600" />
-            <div className="text-slate-300 text-sm font-medium">CRECI <span className="text-white font-bold">7473</span></div>
-            <div className="h-4 w-px bg-slate-600" />
-            <div className="text-slate-300 text-sm font-medium">Manaus <span className="text-white font-bold">· AM</span></div>
-          </div>
-
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-400">
+          {/* CTAs & Mini Profile Mobile */}
+          <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto animate-fade-in-up delay-300">
+            {/* CTA Primary */}
             <a
               href={WA_MSG_AGENDAR}
               target="_blank"
               rel="noopener noreferrer"
               id="btn-hero-agendar"
-              className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-bold text-base rounded-2xl transition-all duration-200 hover:shadow-2xl hover:shadow-green-500/30 hover:scale-105 active:scale-95"
+              className="flex items-center justify-center gap-3 w-full sm:w-auto px-8 py-4 bg-green-500 hover:bg-green-400 text-white font-bold rounded-2xl transition-all duration-300 shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:shadow-[0_0_30px_rgba(34,197,94,0.6)] active:scale-95"
             >
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>
-              Agendar Consultoria Gratuita
+              <svg className="w-6 h-6 animate-wa-bounce" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>
+              Falar com Wilton Mendes no WhatsApp
             </a>
+            {/* CTA Secondary */}
             <button
               onClick={() => document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' })}
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/20 hover:border-white/50 text-white font-semibold text-base rounded-2xl transition-all duration-200 hover:bg-white/5"
+              className="w-full sm:w-auto px-8 py-4 bg-white/5 backdrop-blur-md border border-white/20 hover:bg-white/10 text-white font-semibold rounded-2xl transition-all duration-300 active:scale-95"
             >
-              Ver Serviços
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+              Conhecer Serviços
             </button>
           </div>
+
+          {/* Mini Profile Info Mobile (Floating effect on Desktop) */}
+          <div className="mt-12 lg:hidden flex items-center gap-4 p-4 bg-slate-900/40 backdrop-blur-md rounded-2xl border border-white/10 animate-fade-in-up delay-400">
+            <img src="/images/wilton.jpg" alt="Wilton Mendes" className="w-14 h-14 rounded-full object-cover border-2 border-amber-400" />
+            <div className="text-left">
+              <p className="text-white font-bold flex items-center gap-1.5">
+                Wilton Mendes
+                <svg className="w-4 h-4 text-blue-400" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+              </p>
+              <p className="text-slate-300 text-xs">Especialista de Alto Padrão</p>
+            </div>
+          </div>
+
         </div>
 
-        {/* Photo column */}
-        <div className="flex justify-center lg:justify-end animate-fade-in-right delay-300">
-          <div className="relative">
-            {/* Glow ring */}
-            <div className="absolute -inset-4 rounded-3xl opacity-30" style={{ background: 'linear-gradient(135deg, #f5c842, #3b82f6)', filter: 'blur(24px)' }} />
-            {/* Photo card */}
-            <div className="relative bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-sm rounded-3xl p-2 border border-white/10 shadow-2xl animate-float">
-              <img
-                src="/images/wilton.jpg"
-                alt="Wilton Mendes — Corretor de Imóveis em Manaus"
-                className="w-72 h-80 sm:w-80 sm:h-96 object-cover object-top rounded-2xl"
-              />
-              {/* Info badge over photo */}
-              <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-2xl px-5 py-3">
-                <div className="flex items-center gap-2 mb-1">
-                  <Stars />
-                  <span className="font-black text-slate-900">5.0</span>
+        {/* Floating Mini Profile Desktop */}
+        <div className="hidden lg:block animate-fade-in-right delay-500">
+          <div className="relative p-6 bg-slate-900/40 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl animate-float">
+             <div className="absolute -inset-1 rounded-3xl bg-gradient-to-tr from-amber-400/20 to-blue-500/20 blur-xl opacity-50" />
+             <div className="relative flex flex-col items-center">
+                <img src="/images/wilton.jpg" alt="Wilton Mendes" className="w-32 h-32 rounded-full object-cover border-4 border-slate-800 shadow-xl mb-4" />
+                <h3 className="text-white font-bold text-xl flex items-center gap-1.5">
+                  Wilton Mendes
+                  <svg className="w-5 h-5 text-blue-400" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                </h3>
+                <p className="text-slate-300 text-sm mb-4 text-center">Consultor de Elite<br/>em Manaus</p>
+                <div className="w-full h-px bg-white/10 mb-4" />
+                <div className="flex gap-4">
+                  <div className="text-center">
+                    <p className="text-amber-400 font-bold">10+</p>
+                    <p className="text-[10px] text-slate-400 uppercase tracking-wider">Anos Exp.</p>
+                  </div>
+                  <div className="w-px bg-white/10" />
+                  <div className="text-center">
+                    <p className="text-white font-bold">500+</p>
+                    <p className="text-[10px] text-slate-400 uppercase tracking-wider">Negócios</p>
+                  </div>
                 </div>
-                <p className="text-xs text-slate-500 font-medium">23 avaliações no Google</p>
-              </div>
-              {/* CRECI badge */}
-              <div className="absolute -top-4 -right-4 bg-amber-400 rounded-2xl shadow-xl px-4 py-2 text-center">
-                <p className="text-[10px] text-amber-900 font-semibold leading-none">CRECI</p>
-                <p className="text-lg font-black text-amber-900 leading-tight">7473</p>
-              </div>
-            </div>
+             </div>
           </div>
         </div>
 
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-50">
-        <span className="text-white text-xs font-medium">Rolar</span>
-        <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-50 z-10">
+        <span className="text-white text-[10px] uppercase tracking-widest font-semibold">Descubra</span>
+        <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
       </div>
     </section>
   );
