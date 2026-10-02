@@ -2,15 +2,17 @@ import { useState, useRef, type FormEvent, type ChangeEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useProperties } from '../context/PropertiesContext';
 import { WILTON, ADMIN_PASSWORD } from '../config/broker';
-import type { Property, PropertyType, PropertyPurpose } from '../data/properties';
+import type { Property, PropertyType, PropertyPurpose, PropertyStatus } from '../data/properties';
 
 const PROPERTY_TYPES: PropertyType[] = ['Apartamento', 'Prédio', 'Casa', 'Cobertura', 'Sala Comercial', 'Terreno'];
 const PURPOSES: PropertyPurpose[] = ['Venda', 'Aluguel', 'Venda e Aluguel'];
+const STATUSES: PropertyStatus[] = ['Disponível', 'Em lançamento', 'Em construção', 'Entregue'];
 
 const emptyForm = () => ({
   title: '',
   type: 'Apartamento' as PropertyType,
   purpose: 'Venda' as PropertyPurpose,
+  status: 'Disponível' as PropertyStatus,
   city: '',
   neighborhood: '',
   state: '',
@@ -121,6 +123,7 @@ export default function AdminPage() {
       title: p.title,
       type: p.type,
       purpose: p.purpose,
+      status: p.status,
       city: p.city,
       neighborhood: p.neighborhood,
       state: p.state,
@@ -147,12 +150,14 @@ export default function AdminPage() {
     e.preventDefault();
     setSaving(true);
 
+    const image = form.image || '/images/imovel_atlantico_1790896979412.png';
     const property: Property = {
       id: editId ?? `custom-${Date.now()}`,
       code: form.code || `WM-${Date.now().toString().slice(-4)}`,
       title: form.title,
       type: form.type,
       purpose: form.purpose,
+      status: form.status,
       city: form.city,
       neighborhood: form.neighborhood,
       state: form.state,
@@ -160,7 +165,8 @@ export default function AdminPage() {
       bedrooms: parseInt(form.bedrooms) || 0,
       bathrooms: parseInt(form.bathrooms) || 0,
       area: parseFloat(form.area) || 0,
-      image: form.image || '/images/imovel_atlantico_1790896979412.png',
+      image,
+      images: [image],
       launchTag: form.launchTag || undefined,
       broker: {
         name: WILTON.name,
@@ -307,6 +313,19 @@ export default function AdminPage() {
                     </select>
                   </Field>
                 </div>
+
+                {/* Status */}
+                <Field label="Status *">
+                  <select
+                    required
+                    id="select-status-admin"
+                    value={form.status}
+                    onChange={e => setField('status', e.target.value)}
+                    className={inputCls}
+                  >
+                    {STATUSES.map(s => <option key={s} value={s}>{s}</option>)}
+                  </select>
+                </Field>
 
                 {/* City + State */}
                 <div className="grid grid-cols-3 gap-3">
