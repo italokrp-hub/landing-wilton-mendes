@@ -1,6 +1,6 @@
 import { WILTON } from '../config/broker';
 import { cities, types, purposes, priceRanges } from '../data/properties';
-import type { Filters } from '../App';
+import type { Filters } from '../types/filters';
 
 interface HeroFiltersProps {
   filters: Filters;
