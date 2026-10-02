@@ -4,6 +4,7 @@ import { WILTON } from '../config/broker';
 interface PropertyCardProps {
   property: Property;
   index?: number;
+  onDetails: (property: Property) => void;
 }
 
 const formatPrice = (price: number) =>
@@ -18,7 +19,7 @@ const typeColors: Record<string, string> = {
   Terreno: 'bg-orange-600',
 };
 
-export default function PropertyCard({ property, index = 0 }: PropertyCardProps) {
+export default function PropertyCard({ property, index = 0, onDetails }: PropertyCardProps) {
   const tagColor = typeColors[property.type] ?? 'bg-blue-600';
   const delay = `${index * 0.08}s`;
 
@@ -126,13 +127,13 @@ export default function PropertyCard({ property, index = 0 }: PropertyCardProps)
 
         {/* Action buttons */}
         <div className="flex flex-col gap-2 mt-auto">
-          <a
+          <button
             id={`btn-ver-detalhes-${property.id}`}
-            href={`/propriedade/${property.id}`}
+            onClick={() => onDetails(property)}
             className="flex items-center justify-center gap-2 w-full py-2.5 bg-blue-900 text-white text-sm font-semibold rounded-xl hover:bg-blue-800 active:scale-95 transition-all duration-200 text-center"
           >
             Ver detalhes →
-          </a>
+          </button>
           <button
             id={`btn-whatsapp-${property.id}`}
             onClick={handleWhatsApp}

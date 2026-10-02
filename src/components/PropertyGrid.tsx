@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { Property } from '../data/properties';
 import PropertyCard from './PropertyCard';
+import PropertyDetailsModal from './PropertyDetailsModal';
 
 type ViewMode = 'grid' | 'map';
 
@@ -11,6 +12,7 @@ interface PropertyGridProps {
 
 export default function PropertyGrid({ properties, totalCount }: PropertyGridProps) {
   const [view, setView] = useState<ViewMode>('grid');
+  const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
 
   return (
     <section id="imoveis-disponiveis" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
@@ -72,7 +74,12 @@ export default function PropertyGrid({ properties, totalCount }: PropertyGridPro
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {properties.map((property, index) => (
-                <PropertyCard key={property.id} property={property} index={index} />
+                <PropertyCard
+                  key={property.id}
+                  property={property}
+                  index={index}
+                  onDetails={setSelectedProperty}
+                />
               ))}
             </div>
           )}
@@ -98,6 +105,14 @@ export default function PropertyGrid({ properties, totalCount }: PropertyGridPro
             Voltar para Grade
           </button>
         </div>
+      )}
+
+      {/* Property Details Modal */}
+      {selectedProperty && (
+        <PropertyDetailsModal
+          property={selectedProperty}
+          onClose={() => setSelectedProperty(null)}
+        />
       )}
     </section>
   );
