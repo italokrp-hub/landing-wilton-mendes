@@ -7,7 +7,7 @@ export const WILTON = {
   phone: '92984179972',
   whatsapp: '5592984179972',
   creci: 'CRECI-AM 12.345-F',
-  experience: 'Vasta experiência e sólido conhecimento',
+  experience: 'Profissional com amplo conhecimento no mercado imobiliário',
   site: 'wiltonmendescorretor.com.br',
   instagram: '@wiltonmendescorretor',
   email: 'wilton@wiltonmendescorretor.com.br',

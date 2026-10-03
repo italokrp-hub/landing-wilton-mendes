@@ -406,7 +406,7 @@ function ServicesSection() {
           </h2>
           <div className="section-divider mx-auto mb-6" />
           <p className="text-slate-500 max-w-2xl mx-auto text-lg">
-            Mais de uma década de experiência no mercado imobiliário de Manaus, com atendimento ético e personalizado para cada etapa da sua jornada.
+            Profissional com amplo conhecimento no mercado imobiliário de Manaus, com atendimento ético e personalizado para cada etapa da sua jornada.
           </p>
         </div>
 
@@ -501,7 +501,7 @@ function AboutSection() {
             </h2>
             <div className="section-divider mb-6" />
             <p className="text-slate-600 leading-relaxed mb-4">
-              Nascido e criado em Manaus, conheço o mercado imobiliário local como poucos. Ao longo de mais de uma década, acompanhei centenas de famílias e investidores a realizarem seus sonhos — sempre com honestidade, clareza e dedicação total ao cliente.
+              Nascido e criado em Manaus, conheço o mercado imobiliário local como poucos. Como um profissional com amplo conhecimento no mercado imobiliário, acompanhei centenas de famílias e investidores a realizarem seus sonhos — sempre com honestidade, clareza e dedicação total ao cliente.
             </p>
             <p className="text-slate-600 leading-relaxed mb-8">
               Meu compromisso vai além da venda: fico ao seu lado desde a busca do imóvel até a assinatura das escrituras. Porque comprar ou vender um imóvel é uma das decisões mais importantes da sua vida — e você merece um profissional à altura dessa responsabilidade.

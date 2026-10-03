@@ -49,8 +49,7 @@ export default function HeroFilters({ filters, onFilterChange }: HeroFiltersProp
 
             {/* Sub */}
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              Atendimento exclusivo e personalizado com vasta experiência e sólido conhecimento do mercado imobiliário
-              e investidores a realizarem o sonho do imóvel perfeito no Amazonas e no Brasil.
+              Atendimento exclusivo e personalizado por um profissional com amplo conhecimento no mercado imobiliário para compradores e investidores no Amazonas.
             </p>
 
             {/* Trust badges */}

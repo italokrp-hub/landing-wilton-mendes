@@ -23,8 +23,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed max-w-xs mb-4">
-              Especialista em consultoria imobiliária com vasta experiência e sólido conhecimento do mercado imobiliário
-              no mercado. Atendimento exclusivo e personalizado para você e sua família.
+              Especialista em consultoria imobiliária, profissional com amplo conhecimento no mercado imobiliário em Manaus. Atendimento exclusivo e personalizado para você e sua família.
             </p>
             <div className="flex items-center gap-1.5">
               <div className="w-2 h-2 rounded-full bg-green-400" />
