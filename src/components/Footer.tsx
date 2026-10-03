@@ -23,7 +23,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed max-w-xs mb-4">
-              Especialista em consultoria imobiliária com mais de 10 anos de experiência
+              Especialista em consultoria imobiliária com vasta experiência e sólido conhecimento do mercado imobiliário
               no mercado. Atendimento exclusivo e personalizado para você e sua família.
             </p>
             <div className="flex items-center gap-1.5">

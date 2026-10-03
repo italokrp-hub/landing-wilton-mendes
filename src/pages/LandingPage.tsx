@@ -283,8 +283,8 @@ function HeroSection() {
                 <div className="w-full h-px bg-white/10 mb-4" />
                 <div className="flex gap-4">
                   <div className="text-center">
-                    <p className="text-amber-400 font-bold">10+</p>
-                    <p className="text-[10px] text-slate-400 uppercase tracking-wider">Anos Exp.</p>
+                    <p className="text-amber-400 font-bold">💎</p>
+                    <p className="text-[10px] text-slate-400 uppercase tracking-wider">Experiência</p>
                   </div>
                   <div className="w-px bg-white/10" />
                   <div className="text-center">
@@ -488,8 +488,8 @@ function AboutSection() {
 
             {/* Floating experience badge */}
             <div className="absolute -top-6 -right-6 bg-slate-900 text-white rounded-2xl shadow-2xl p-4 text-center">
-              <p className="text-3xl font-black text-amber-400">10+</p>
-              <p className="text-xs text-slate-400 font-medium leading-tight">anos de<br />experiência</p>
+              <p className="text-3xl font-black text-amber-400">💎</p>
+              <p className="text-xs text-slate-400 font-medium leading-tight">Experiência<br />Comprovada</p>
             </div>
           </div>
 
@@ -679,7 +679,7 @@ function LocationSection() {
         <div ref={ref} className={`text-center mb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <span className="inline-block text-blue-600 text-sm font-bold uppercase tracking-widest mb-3">Venha nos visitar</span>
           <h2 className="text-3xl sm:text-4xl font-black text-slate-900 mb-4" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
-            Localização e Contacto
+            Localização e Contato
           </h2>
           <div className="section-divider mx-auto" />
         </div>
@@ -732,12 +732,8 @@ function LocationSection() {
               </h3>
               <div className="space-y-2">
                 <div className="flex justify-between">
-                  <span className="text-slate-600 text-sm font-medium">Segunda a Sexta</span>
-                  <span className="text-slate-900 text-sm font-bold">08:00 – 18:00</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-slate-600 text-sm font-medium">Sábado</span>
-                  <span className="text-slate-900 text-sm font-bold">09:00 – 13:00</span>
+                  <span className="text-slate-600 text-sm font-medium">Segunda a Sábado</span>
+                  <span className="text-slate-900 text-sm font-bold">09:00 – 18:00</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-slate-600 text-sm font-medium">Domingo</span>
@@ -865,7 +861,7 @@ function Footer() {
 
           {/* Contact */}
           <div>
-            <p className="text-white font-semibold text-sm mb-4">Contacto</p>
+            <p className="text-white font-semibold text-sm mb-4">Contato</p>
             <ul className="space-y-2 text-xs text-slate-500">
               <li className="flex items-start gap-2">
                 <span>📍</span>

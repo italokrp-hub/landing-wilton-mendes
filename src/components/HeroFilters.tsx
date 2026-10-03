@@ -49,14 +49,14 @@ export default function HeroFilters({ filters, onFilterChange }: HeroFiltersProp
 
             {/* Sub */}
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              Atendimento exclusivo e personalizado. Há mais de 10 anos ajudando famílias
+              Atendimento exclusivo e personalizado com vasta experiência e sólido conhecimento do mercado imobiliário
               e investidores a realizarem o sonho do imóvel perfeito no Amazonas e no Brasil.
             </p>
 
             {/* Trust badges */}
             <div className="flex flex-wrap gap-4 mb-8 animate-fade-in-up" style={{ animationDelay: '0.25s' }}>
               {[
-                { icon: '🏆', label: '10+ anos', sub: 'de experiência' },
+                { icon: '🏆', label: 'Experiência', sub: 'Comprovada' },
                 { icon: '🏠', label: '500+', sub: 'imóveis negociados' },
                 { icon: '⭐', label: '98%', sub: 'satisfação' },
               ].map(b => (
