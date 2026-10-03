@@ -898,7 +898,7 @@ function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <span>🕐</span>
-                <span>Seg–Sex: 08:00–18:00 · Sáb: 09:00–13:00</span>
+                <span>Segunda a Sábado: 09:00–18:00</span>
               </li>
             </ul>
           </div>
