@@ -202,94 +202,113 @@ function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden"
+      className="relative min-h-[100dvh] flex items-center justify-start overflow-hidden"
     >
-      {/* Background Image & Overlay */}
+      {/* Background Image: Modern Building with Pool & Palms */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80"
-          alt="Imóvel de luxo"
-          className="w-full h-full object-cover"
+          src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1920&q=80"
+          alt="Prédio de luxo com piscina em Manaus"
+          className="w-full h-full object-cover object-center scale-105 transition-transform duration-1000"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-950/40 lg:bg-gradient-to-r lg:from-slate-950 lg:via-slate-950/90 lg:to-slate-950/30" />
+        {/* Soft Shading Overlay: Darker on text area (left/top), lighter on building & pool (right/bottom) */}
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/70 to-slate-950/40 md:bg-gradient-to-r md:from-slate-950/90 md:via-slate-950/65 md:to-slate-950/20" />
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-slate-950 to-transparent pointer-events-none" />
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-24 lg:py-32 flex flex-col lg:flex-row items-center justify-between gap-12 w-full mt-16 lg:mt-0">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-28 lg:py-36 flex flex-col lg:flex-row items-center justify-between gap-12 w-full">
         
-        {/* Text content */}
-        <div className="flex-1 text-center lg:text-left flex flex-col items-center lg:items-start max-w-3xl">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-slate-200 text-xs sm:text-sm font-medium mb-6 animate-fade-in-up">
-            <span className="text-amber-400 text-sm">⭐</span> 5.0 no Google (23 avaliações) <span className="opacity-50">•</span> CRECI 7473
-          </div>
+        {/* Main Left Text Block (Reference Style Typography) */}
+        <div className="flex-1 text-left flex flex-col items-start max-w-2xl">
+          
+          {/* Top Tag / Sub-header (like MASTERCLASS in reference) */}
+          <span className="text-amber-400 font-bold uppercase tracking-widest text-xs sm:text-sm mb-2 drop-shadow">
+            CONSULTORIA IMOBILIÁRIA DE ALTO PADRÃO
+          </span>
 
-          {/* Headline */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-6 tracking-tight animate-fade-in-up delay-100 uppercase">
-            Encontre o imóvel ideal em Manaus com segurança e exclusividade
+          {/* Sub headline in Oswald uppercase */}
+          <h2
+            className="text-xl sm:text-2xl lg:text-3xl font-bold uppercase text-white tracking-wide mb-2 leading-tight drop-shadow-md"
+            style={{ fontFamily: "'Oswald', sans-serif" }}
+          >
+            ENCONTRE O IMÓVEL IDEAL EM MANAUS
+          </h2>
+
+          {/* Main Impact Headline (like DESCUBRA COMO... in reference) */}
+          <h1
+            className="text-4xl sm:text-6xl lg:text-7xl font-extrabold uppercase text-white tracking-tight leading-[0.98] mb-6 drop-shadow-xl"
+            style={{ fontFamily: "'Oswald', sans-serif" }}
+          >
+            COM SEGURANÇA E EXCLUSIVIDADE
           </h1>
 
-          {/* Subtitle */}
-          <p className="text-lg sm:text-xl text-slate-200 leading-relaxed mb-10 max-w-2xl animate-fade-in-up delay-200">
+          {/* Subtitle / Body text */}
+          <p className="text-base sm:text-lg text-slate-100 font-normal leading-relaxed mb-6 max-w-xl drop-shadow">
             Assessoria imobiliária completa para compra, venda e financiamento de imóveis de alto padrão e oportunidades únicas com Wilton Mendes.
           </p>
 
-          {/* CTAs & Mini Profile Mobile */}
-          <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto animate-fade-in-up delay-300">
-            {/* CTA Primary */}
+          {/* Meta line (like 15/10 • 19h30 in reference) */}
+          <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm font-semibold text-slate-200 mb-8 bg-slate-900/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 shadow-lg">
+            <span className="text-amber-400">⭐ 5.0 no Google</span>
+            <span className="text-slate-400">•</span>
+            <span>23 avaliações</span>
+            <span className="text-slate-400">•</span>
+            <span className="text-blue-400 font-bold">CRECI 7473</span>
+          </div>
+
+          {/* CTA Buttons (Pill shape matching reference) */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+            {/* Primary CTA: Yellow/Green Vibrant Pill Button */}
             <a
               href={WA_MSG_AGENDAR}
               target="_blank"
               rel="noopener noreferrer"
               id="btn-hero-agendar"
-              className="flex items-center justify-center gap-3 w-full sm:w-auto px-8 py-4 bg-green-500 hover:bg-green-400 text-white font-bold rounded-2xl transition-all duration-300 shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:shadow-[0_0_30px_rgba(34,197,94,0.6)] active:scale-95"
+              className="flex items-center justify-center gap-3 px-8 py-4 bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-base sm:text-lg rounded-full transition-all duration-300 shadow-[0_0_25px_rgba(251,191,36,0.5)] hover:shadow-[0_0_35px_rgba(251,191,36,0.7)] hover:scale-105 active:scale-95"
             >
-              <svg className="w-6 h-6 animate-wa-bounce" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>
-              Falar com Wilton Mendes no WhatsApp
+              <svg className="w-6 h-6 text-slate-950 animate-wa-bounce" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+              Falar no WhatsApp
             </a>
-            {/* CTA Secondary */}
+
+            {/* Secondary Floating White Pill CTA (matching 'Ver detalhes' in reference) */}
             <button
               onClick={() => document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' })}
-              className="w-full sm:w-auto px-8 py-4 bg-white/5 backdrop-blur-md border border-white/20 hover:bg-white/10 text-white font-semibold rounded-2xl transition-all duration-300 active:scale-95"
+              className="flex items-center justify-center gap-2 px-8 py-4 bg-white hover:bg-slate-100 text-slate-900 font-bold text-base rounded-full shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 border border-slate-200"
             >
-              Conhecer Serviços
+              <svg className="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
+              </svg>
+              Ver detalhes
             </button>
-          </div>
-
-          {/* Mini Profile Info Mobile (Floating effect on Desktop) */}
-          <div className="mt-12 lg:hidden flex items-center gap-4 p-4 bg-slate-900/40 backdrop-blur-md rounded-2xl border border-white/10 animate-fade-in-up delay-400">
-            <img src="/images/wilton.jpg" alt="Wilton Mendes" className="w-14 h-14 rounded-full object-cover border-2 border-amber-400" />
-            <div className="text-left">
-              <p className="text-white font-bold flex items-center gap-1.5">
-                Wilton Mendes
-                <svg className="w-4 h-4 text-blue-400" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-              </p>
-              <p className="text-slate-300 text-xs">Especialista de Alto Padrão</p>
-            </div>
           </div>
 
         </div>
 
         {/* Floating Mini Profile Desktop */}
-        <div className="hidden lg:block animate-fade-in-right delay-500">
-          <div className="relative p-6 bg-slate-900/40 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl animate-float">
-             <div className="absolute -inset-1 rounded-3xl bg-gradient-to-tr from-amber-400/20 to-blue-500/20 blur-xl opacity-50" />
+        <div className="hidden lg:block">
+          <div className="relative p-6 bg-slate-950/60 backdrop-blur-xl border border-white/15 rounded-3xl shadow-2xl">
+             <div className="absolute -inset-1 rounded-3xl bg-gradient-to-tr from-amber-400/30 to-blue-500/30 blur-xl opacity-60" />
              <div className="relative flex flex-col items-center">
-                <img src="/images/wilton.jpg" alt="Wilton Mendes" className="w-32 h-32 rounded-full object-cover border-4 border-slate-800 shadow-xl mb-4" />
-                <h3 className="text-white font-bold text-xl flex items-center gap-1.5">
+                <img src="/images/wilton.jpg" alt="Wilton Mendes" className="w-32 h-32 rounded-full object-cover border-4 border-amber-400/80 shadow-xl mb-4" />
+                <h3 className="text-white font-black text-xl flex items-center gap-1.5">
                   Wilton Mendes
-                  <svg className="w-5 h-5 text-blue-400" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                  <svg className="w-5 h-5 text-blue-400" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
                 </h3>
-                <p className="text-slate-300 text-sm mb-4 text-center">Consultor de Elite<br/>em Manaus</p>
-                <div className="w-full h-px bg-white/10 mb-4" />
+                <p className="text-slate-300 text-sm mb-4 text-center font-medium">Consultor de Elite<br/>em Manaus</p>
+                <div className="w-full h-px bg-white/15 mb-4" />
                 <div className="flex gap-4">
                   <div className="text-center">
                     <p className="text-amber-400 font-bold">💎</p>
-                    <p className="text-[10px] text-slate-400 uppercase tracking-wider">Experiência</p>
+                    <p className="text-[10px] text-slate-300 uppercase tracking-wider font-semibold">Conhecimento</p>
                   </div>
-                  <div className="w-px bg-white/10" />
+                  <div className="w-px bg-white/15" />
                   <div className="text-center">
                     <p className="text-white font-bold">500+</p>
-                    <p className="text-[10px] text-slate-400 uppercase tracking-wider">Negócios</p>
+                    <p className="text-[10px] text-slate-300 uppercase tracking-wider font-semibold">Negócios</p>
                   </div>
                 </div>
              </div>
@@ -299,9 +318,11 @@ function HeroSection() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-50 z-10">
-        <span className="text-white text-[10px] uppercase tracking-widest font-semibold">Descubra</span>
-        <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-60 z-10 pointer-events-none">
+        <span className="text-white text-[10px] uppercase tracking-widest font-semibold drop-shadow">Descubra</span>
+        <svg className="w-4 h-4 text-white drop-shadow" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
       </div>
     </section>
   );
