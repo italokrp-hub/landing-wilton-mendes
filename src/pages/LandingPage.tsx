@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 
 // ── Constants ─────────────────────────────────────────────────────────────────
-const WA_NUMBER = '5592984179972';
+const WA_NUMBER = '5592984138859';
 const WA_BASE   = `https://wa.me/${WA_NUMBER}`;
 
 const waLink = (msg: string) =>
@@ -780,7 +780,7 @@ function LocationSection() {
                 <span className="text-xs font-bold">WhatsApp</span>
               </a>
               <a
-                href="tel:+5592984179972"
+                href="tel:+5592984138859"
                 id="btn-contato-telefone"
                 className="flex flex-col items-center gap-2 p-4 bg-slate-900 hover:bg-slate-800 text-white rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-105 active:scale-95 text-center"
               >
@@ -836,10 +836,10 @@ function CTABanner() {
             Iniciar Consultoria Gratuita
           </a>
           <a
-            href="tel:+5592984179972"
+            href="tel:+5592984138859"
             className="inline-flex items-center justify-center gap-3 px-10 py-5 border-2 border-white/20 hover:border-white/50 text-white font-bold text-lg rounded-2xl transition-all duration-200 hover:bg-white/5"
           >
-            (92) 98417-9972
+            (92) 98413-8859
           </a>
         </div>
       </div>
@@ -890,7 +890,7 @@ function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <span>📱</span>
-                <a href="tel:+5592984179972" className="hover:text-slate-300 transition-colors">(92) 98417-9972</a>
+                <a href="tel:+5592984138859" className="hover:text-slate-300 transition-colors">(92) 98413-8859</a>
               </li>
               <li className="flex items-center gap-2">
                 <span>✉️</span>

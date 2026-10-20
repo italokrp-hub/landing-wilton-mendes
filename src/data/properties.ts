@@ -7,8 +7,8 @@ export interface Broker {
 // Wilton Mendes — corretor responsável por todos os imóveis desta vitrine
 const WILTON_BROKER: Broker = {
   name: 'Wilton Mendes',
-  phone: '92984179972',
-  whatsapp: '5592984179972',
+  phone: '92984138859',
+  whatsapp: '5592984138859',
 };
 
 export type PropertyType =
