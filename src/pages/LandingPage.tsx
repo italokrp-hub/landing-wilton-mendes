@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import BuildingScrollytelling from '../components/BuildingScrollytelling';
 
 // ── Constants ─────────────────────────────────────────────────────────────────
 const WA_NUMBER = '5592984138859';
@@ -924,6 +925,7 @@ export default function LandingPage() {
       <Navbar />
       <main>
         <HeroSection />
+        <BuildingScrollytelling />
         <TrustBar />
         <ServicesSection />
         <AboutSection />
