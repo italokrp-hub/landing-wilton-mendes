@@ -508,9 +508,18 @@ function AboutSection() {
             </div>
 
             {/* Floating experience badge */}
-            <div className="absolute -top-6 -right-6 bg-slate-900 text-white rounded-2xl shadow-2xl p-4 text-center">
-              <p className="text-3xl font-black text-amber-400">💎</p>
-              <p className="text-xs text-slate-400 font-medium leading-tight">Experiência<br />Comprovada</p>
+            <div className="absolute -top-3.5 right-3 sm:-right-3 bg-slate-900/95 backdrop-blur-md text-white rounded-xl shadow-lg border border-white/10 px-3.5 py-2 flex items-center gap-2.5 z-10 transition-transform duration-300 hover:scale-105">
+              <div className="w-7 h-7 rounded-lg bg-amber-400/10 border border-amber-400/25 flex items-center justify-center shrink-0">
+                <svg className="w-3.5 h-3.5 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M6 3h12l4 6-10 12L2 9Z" />
+                  <path d="M11 3 8 9l4 13 4-13-3-6" />
+                  <path d="M2 9h20" />
+                </svg>
+              </div>
+              <div className="leading-tight text-left">
+                <p className="text-[10px] uppercase tracking-wider text-slate-400 font-medium">Experiência</p>
+                <p className="text-xs font-bold text-white tracking-wide">Comprovada</p>
+              </div>
             </div>
           </div>
 
