@@ -721,7 +721,7 @@ function LocationSection() {
             <div className="rounded-3xl overflow-hidden shadow-2xl border border-slate-100 h-80 lg:h-96">
               <iframe
                 title="Localização Wilton Mendes — Edifício Atrium, São Francisco, Manaus"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.988406624!2d-60.02176!3d-3.10563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c0b8db4ce2f51%3A0x3a4b8e2f1c7d9e3a!2sEdif%C3%ADcio+Atrium%2C+R.+Sobrinho+Maranh%C3%A3o%2C+310+-+S%C3%A3o+Francisco%2C+Manaus+-+AM%2C+69079-210!5e0!3m2!1spt-BR!2sbr!4v1696276800000!5m2!1spt-BR!2sbr"
+                src="https://maps.google.com/maps?q=Edif%C3%ADcio+Atrium%2C+R.+Sobrinho+Maranh%C3%A3o%2C+310+-+S%C3%A3o+Francisco%2C+Manaus+-+AM%2C+69079-210&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=&amp;output=embed&amp;hl=pt-BR"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -731,7 +731,7 @@ function LocationSection() {
               />
             </div>
             <a
-              href="https://maps.google.com/?q=Edif%C3%ADcio+Atrium+R.+Sobrinho+Maranh%C3%A3o+310+S%C3%A3o+Francisco+Manaus+AM"
+              href="https://www.google.com/maps/search/?api=1&amp;query=Edif%C3%ADcio+Atrium%2C+R.+Sobrinho+Maranh%C3%A3o%2C+310+-+S%C3%A3o+Francisco%2C+Manaus+-+AM%2C+69079-210"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 mt-4 text-blue-600 hover:text-blue-800 font-semibold text-sm transition-colors"
