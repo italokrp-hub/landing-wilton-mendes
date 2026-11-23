@@ -251,7 +251,7 @@ function HeroSection() {
           <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm font-semibold text-slate-200 mb-8 bg-slate-900/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 shadow-lg">
             <span className="text-amber-400">⭐ 5.0 no Google</span>
             <span className="text-slate-400">•</span>
-            <span>23 avaliações</span>
+            <span>34 avaliações</span>
             <span className="text-slate-400">•</span>
             <span className="text-blue-400 font-bold">CRECI 7473</span>
           </div>
@@ -333,7 +333,7 @@ function TrustBar() {
   const { ref, inView } = useInView();
   const stats = [
     { value: '5.0', label: 'Avaliação Google', icon: '⭐' },
-    { value: '23', label: 'Clientes avaliaram', icon: '👥' },
+    { value: '34', label: 'Clientes avaliaram', icon: '👥' },
     { value: 'CRECI', label: '7473 — Registrado', icon: '📋' },
     { value: 'Manaus', label: 'Especialista local', icon: '📍' },
   ];
@@ -473,7 +473,7 @@ function AboutSection() {
   const { ref, inView } = useInView();
 
   const highlights = [
-    { icon: '🏆', title: 'Avaliação 5.0', desc: 'Nota máxima no Google com 23 clientes satisfeitos' },
+    { icon: '🏆', title: 'Avaliação 5.0', desc: 'Nota máxima no Google com 34 clientes satisfeitos' },
     { icon: '📋', title: 'CRECI 7473', desc: 'Registro ativo no Conselho Regional de Corretores' },
     { icon: '🤝', title: 'Atendimento ético', desc: 'Transparência e honestidade em cada negociação' },
     { icon: '⚡', title: 'Resultado ágil', desc: 'Processos enxutos para você economizar tempo' },
@@ -610,7 +610,7 @@ function ReviewsSection() {
             <div className="text-center">
               <p className="text-5xl font-black text-slate-900 leading-none">5.0</p>
               <Stars />
-              <p className="text-slate-500 text-xs font-medium mt-1">23 avaliações</p>
+              <p className="text-slate-500 text-xs font-medium mt-1">34 avaliações</p>
             </div>
             <div className="h-14 w-px bg-slate-100" />
             <div className="text-left">
